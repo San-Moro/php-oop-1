@@ -11,7 +11,9 @@ class Movie
     public $original_language;
     public $vote;
 
-    function __construct(String $name, String $directors, String $actors, String $genre, String $duration, String $release_date, String $original_language, Int $vote) {
+    // Construct
+    function __construct(String $name, String $directors, String $actors, String $genre, String $duration, String $release_date, String $original_language, Int $vote) 
+    {
         $this->name = $name;
         $this->directors = $directors;
         $this->actors = $actors;
@@ -22,5 +24,17 @@ class Movie
         $this->vote = $vote;
     }
 
-
+    // Method
+    public function printMovieInfo() 
+    {
+        return 
+        "Name: $this->name; 
+        Directors: $this->directors;
+        Actors: $this->actors;
+        Genre: $this->genre;
+        Duration: $this->duration;
+        Release Date: $this->release_date;
+        Original Language: $this->original_language;
+        Vote: $this->vote;";
+    }
 }
